@@ -1,0 +1,169 @@
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(270deg, #ff0202, #ff2323, #ff3434);
+  background-size: 600% 600%;
+  animation: gradientAnimation 9s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 80px;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+.logo {
+  width: 500px;
+  height: auto;
+  margin-top: 20px;   /* controla a distância do topo */
+  margin-bottom: 0px; /* controla a distância até os serviços */
+  z-index: 1;
+}
+
+.servicos {
+  text-align: center;
+  color: white;
+  font-family: 'Roboto-Bold', sans-serif;
+  margin: 0px;          /* remove margens extras */
+  padding-top: 0px;
+}
+
+.servicos h2 {
+  font-family: 'Roboto-Bold', sans-serif;
+  font-size: 25px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.servicos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;          /* remove espaçamento padrão da lista */
+}
+
+.servicos li {
+  font-family: 'Roboto-Bold', sans-serif;
+  font-size: 15px;
+  margin: 8px 0;
+  background: rgba(255,255,255,0.1);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+a {
+  font-family: 'Roboto-Bold', sans-serif;
+  color: white;
+  font-size: 32px;
+  margin-top: 25px;   /* controla espaço entre serviços e texto */
+}
+
+.whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 30px;
+  margin-top: 15px;   /* controla espaço entre texto e WhatsApp */
+  margin-bottom: 40px;
+  text-decoration: none; /* remove sublinhado do link */
+}
+
+.whatsapp:hover {
+    opacity: 0.8; /* efeito ao passar o mouse */
+  }
+
+.icon {
+  background-color: #25D366;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon i {
+  color: white;
+  font-size: 32px;
+}
+
+footer {
+  position: absolute; 
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  padding: 4px 0;
+  background: rgba(0,0,0,0.2); /* leve contraste */
+  bottom: 0;         /* cola no rodapé */
+  left: 0;
+  width: 100%;
+}
+
+/* Celulares */
+@media (max-width: 1065px) {
+  .logo {
+    width: 95%; /* ocupa boa parte da tela */
+    margin-top: 15px;
+  }
+
+  .servicos h2 {
+    font-size: 6vw; /* proporcional à largura da tela */
+    margin-top: 30px;
+  }
+
+  .servicos li {
+    font-size: 4.5vw;
+    padding: 0.5rem;
+  }
+
+  a {
+    font-size: 5vw;
+    margin-top: 0px;   /* controla espaço entre serviços e texto */
+  }
+
+  .whatsapp {
+    font-size: 5vw;
+    gap: 10px;
+  }
+
+  .whatsapp:hover {
+    opacity: 0.8; /* efeito ao passar o mouse */
+  }
+
+  .icon {
+    width: 9vw;
+    height: 9vw;
+  }
+
+  .icon i {
+    font-size: 6vw;
+  }
+
+  footer {
+    position: fixed;   /* fixa na tela */
+    bottom: 0;         /* cola no rodapé */
+    left: 0;
+    width: 100%;       /* ocupa toda a largura */
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    padding: 0px;
+    background: rgba(0,0,0,0.2); /* leve contraste */
+    z-index: 10;       /* fica acima de outros elementos */
+  }
+}
